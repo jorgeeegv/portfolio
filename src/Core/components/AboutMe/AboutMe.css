@@ -1,0 +1,14 @@
+.img-about-me{
+    object-fit: cover;
+    width: 27rem;
+    height: 27rem;
+}
+.color-html{
+    color: chocolate;
+}
+.color-css{
+    color: dodgerblue;
+}
+.color-js{
+    color: goldenrod;
+}

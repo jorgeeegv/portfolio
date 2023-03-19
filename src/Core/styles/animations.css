@@ -1,0 +1,69 @@
+.typing {
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    border-right: .14em solid var(--color-primary);
+    ;
+    /* The typwriter cursor */
+    white-space: pre;
+    /* Keeps the content on a single line */
+    animation:
+        typing 3s steps(80, end),
+        blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: var(--color-primary);
+    }
+}
+
+@keyframes bubble-effect-img {
+    0% {
+        border-radius: 64% 36% 52% 48% / 59% 61% 39% 41%  ;
+    }
+    10% {
+        border-radius: 64% 36% 52% 48% / 40% 61% 39% 60%   ;
+    }
+    20% {
+        border-radius: 39% 61% 52% 48% / 46% 51% 49% 54%    ;
+    }
+    40% {
+        border-radius: 72% 28% 68% 32% / 37% 48% 52% 63% ;
+    }
+    55% {
+        border-radius: 52% 48% 42% 58% / 23% 74% 26% 77%   ;
+    }
+    60% {
+        border-radius: 41% 59% 36% 64% / 49% 75% 25% 51%  ;
+    }
+    70% {
+        border-radius: 41% 59% 74% 26% / 49% 48% 52% 51%   ;
+    }
+    85% {
+        border-radius: 64% 36% 52% 48% / 40% 61% 39% 60%  ;
+    }
+    95% {
+        border-radius: 64% 36% 52% 48% / 40% 61% 39% 60%  ;
+    }
+    100% {
+        border-radius: 64% 36% 52% 48% / 59% 61% 39% 41% ;
+    }
+}

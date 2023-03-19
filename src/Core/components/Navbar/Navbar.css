@@ -1,0 +1,7 @@
+.icon{
+    object-fit: cover !important;
+}
+
+a {
+    color: var(--color-primary) !important;
+}

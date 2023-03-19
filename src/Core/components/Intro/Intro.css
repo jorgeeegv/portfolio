@@ -1,0 +1,54 @@
+.img-intro{
+    width: 32rem;
+    height: 32rem;
+    object-fit: cover;
+    animation: bubble-effect-img 15s forwards infinite;
+    border-color: var(--color-primary) ;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, var(--color-primary) 0px 2px 16px 0px;
+}
+@media (max-width: 820){
+    .img-intro{
+        width: 22rem;
+        height: 22rem;
+        object-fit: cover;
+        animation: bubble-effect-img 15s forwards infinite;
+        border-color: var(--color-primary) ;
+        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, var(--color-primary) 0px 2px 16px 0px;
+    }
+}
+
+.img-emoji{
+    width: 2.3rem;
+    height: 2.3rem;
+}
+.img-emoji-small{
+    width: 18px;
+    height: 18px;
+}
+
+.hook-icons{
+    color: var(--color-primary);
+    width: 2.3rem;
+    height: 2.3rem;
+}
+
+.subtitle-text{
+color: gray;
+}
+.techs{
+    border-right: .20em solid var(--color-primary);
+}
+.tech-icon{
+    width: 2rem;
+    height: 2rem;
+}
+.html-icon  {
+    color: #e34c26
+}
+.css-icon{
+    color:#2965f1
+}
+
+.js-icon{
+    color:#F0DB4F;
+}
