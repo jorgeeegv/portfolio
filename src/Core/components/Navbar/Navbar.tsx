@@ -37,25 +37,25 @@ export default function Navbar() {
                 <Popover.Group className="hidden lg:flex lg:gap-x-12">
                     <a
                         href="#"
-                        className="-mx-3 block rounded-lg py-2 px-3 text-base font-bold leading-7 text-gray-900 hover:bg-gray-50"
+                        className="-mx-3 block rounded-lg py-2 px-3 text-base font-bold leading-7 text-gray-900"
                     >
                         Inicio
                     </a>
                     <a
                         href="#"
-                        className="-mx-3 block rounded-lg py-2 px-3 text-base font-bold leading-7 text-gray-900 hover:bg-gray-50"
+                        className="-mx-3 block rounded-lg py-2 px-3 text-base font-bold leading-7 text-gray-900"
                     >
                         Sobre mí
                     </a>
                     <a
                         href="#"
-                        className="-mx-3 block rounded-lg py-2 px-3 text-base font-bold leading-7 text-gray-900 hover:bg-gray-50"
+                        className="-mx-3 block rounded-lg py-2 px-3 text-base font-bold leading-7 text-gray-900"
                     >
                         Carrera
                     </a>
                     <a
                         href="#"
-                        className="-mx-3 block rounded-lg py-2 px-3 text-base font-bold leading-7 text-gray-900 hover:bg-gray-50"
+                        className="-mx-3 block rounded-lg py-2 px-3 text-base font-bold leading-7 text-gray-900"
                     >
                         Contacto
                     </a>
@@ -65,9 +65,9 @@ export default function Navbar() {
                 <div className="fixed inset-0 z-10" />
                 <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                     <div className="flex items-center justify-between">
-                        <a href="#">
-                            <img className="icon w-12 h-12 rounded-full ring-2 ring-gray-300 dark:ring-gray-500" src={process.env.PUBLIC_URL + '/imgs/jorge2.jpg'} alt="" />
-                        </a>
+                        <div className="flex lg:flex-1">
+                            <span className='text-2xl font-bold'>jorgegv.dev</span>
+                        </div>
                         <button
                             type="button"
                             className="-m-2.5 rounded-md p-2.5 text-gray-700"
@@ -78,27 +78,25 @@ export default function Navbar() {
                         </button>
                     </div>
                     <div className="mt-6 flow-root">
-                        <div className="-my-6 divide-y divide-gray-500/10">
-                            <div className="space-y-2 py-6">
-                                <a
-                                    href="#"
-                                    className="-mx-3 block rounded-lg py-2 px-3 text-base font-bold leading-7 text-gray-900 hover:bg-gray-50"
-                                >
-                                    Inicio
-                                </a>
-                                <a
-                                    href="#"
-                                    className="-mx-3 block rounded-lg py-2 px-3 text-base font-bold leading-7 text-gray-900 hover:bg-gray-50"
-                                >
-                                    Carrera
-                                </a>
-                                <a
-                                    href="#"
-                                    className="-mx-3 block rounded-lg py-2 px-3 text-base font-bold leading-7 text-gray-900 hover:bg-gray-50"
-                                >
-                                    Company
-                                </a>
-                            </div>
+                        <div className="w-full flex flex-col justify-center items-center">
+                            <a
+                                href="#"
+                                className="-mx-3 block rounded-lg py-2 px-3 text-base font-bold leading-7"
+                            >
+                                Inicio
+                            </a>
+                            <a
+                                href="#"
+                                className="-mx-3 block rounded-lg py-2 px-3 text-base font-bold leading-7"
+                            >
+                                Carrera
+                            </a>
+                            <a
+                                href="#"
+                                className="-mx-3 block rounded-lg py-2 px-3 text-base font-bold leading-7"
+                            >
+                                Company
+                            </a>
                         </div>
                     </div>
                 </Dialog.Panel>

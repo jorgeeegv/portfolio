@@ -6,7 +6,7 @@
     border-color: var(--color-primary) ;
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, var(--color-primary) 0px 2px 16px 0px;
 }
-@media (max-width: 820){
+@media (max-width: 820px){
     .img-intro{
         width: 22rem;
         height: 22rem;

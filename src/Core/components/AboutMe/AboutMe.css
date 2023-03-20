@@ -3,6 +3,13 @@
     width: 27rem;
     height: 27rem;
 }
+@media (max-width: 844px){
+    .img-about-me{
+        object-fit: cover;
+        width: 22rem;
+        height: 22rem
+    }
+}
 .color-html{
     color: chocolate;
 }
