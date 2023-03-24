@@ -2,20 +2,13 @@
     object-fit: cover;
     width: 27rem;
     height: 27rem;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, var(--color-primary) 0px 2px 16px 0px;
 }
 @media (max-width: 844px){
     .img-about-me{
         object-fit: cover;
         width: 22rem;
-        height: 22rem
+        height: 22rem;
+        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, var(--color-primary) 0px 2px 16px 0px;
     }
-}
-.color-html{
-    color: chocolate;
-}
-.color-css{
-    color: dodgerblue;
-}
-.color-js{
-    color: goldenrod;
 }

@@ -22,7 +22,7 @@ export default function Navbar() {
         <header className="bg-white">
             <nav className="mx-auto flex items-center justify-between p-6 lg:px-44" aria-label="Global">
                 <div className="flex lg:flex-1">
-                    <span className='text-2xl font-bold'>jorgegv.dev</span>
+                    <span className='text-2xl font-bold color-primary'>jorgegv.dev</span>
                 </div>
                 <div className="flex lg:hidden">
                     <button
@@ -37,25 +37,25 @@ export default function Navbar() {
                 <Popover.Group className="hidden lg:flex lg:gap-x-12">
                     <a
                         href="#"
-                        className="-mx-3 block rounded-lg py-2 px-3 text-base font-bold leading-7 text-gray-900"
+                        className="-mx-3 block rounded-lg py-2 px-3 text-base font-bold leading-7"
                     >
                         Inicio
                     </a>
                     <a
                         href="#"
-                        className="-mx-3 block rounded-lg py-2 px-3 text-base font-bold leading-7 text-gray-900"
+                        className="-mx-3 block rounded-lg py-2 px-3 text-base font-bold leading-7"
                     >
                         Sobre mí
                     </a>
                     <a
                         href="#"
-                        className="-mx-3 block rounded-lg py-2 px-3 text-base font-bold leading-7 text-gray-900"
+                        className="-mx-3 block rounded-lg py-2 px-3 text-base font-bold leading-7"
                     >
                         Carrera
                     </a>
                     <a
                         href="#"
-                        className="-mx-3 block rounded-lg py-2 px-3 text-base font-bold leading-7 text-gray-900"
+                        className="-mx-3 block rounded-lg py-2 px-3 text-base font-bold leading-7"
                     >
                         Contacto
                     </a>

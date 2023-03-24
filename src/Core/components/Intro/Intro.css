@@ -6,7 +6,7 @@
     border-color: var(--color-primary) ;
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, var(--color-primary) 0px 2px 16px 0px;
 }
-@media (max-width: 820px){
+@media (max-width: 1024px){
     .img-intro{
         width: 22rem;
         height: 22rem;
@@ -14,6 +14,13 @@
         animation: bubble-effect-img 15s forwards infinite;
         border-color: var(--color-primary) ;
         box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, var(--color-primary) 0px 2px 16px 0px;
+    }
+    .tech-icon{
+        width: 2rem !important;
+        height: 2rem !important;
+    }
+    .text-title{
+        font-size: 1.8rem;
     }
 }
 
@@ -35,12 +42,9 @@
 .subtitle-text{
 color: gray;
 }
-.techs{
-    border-right: .20em solid var(--color-primary);
-}
 .tech-icon{
-    width: 2rem;
-    height: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
 }
 .html-icon  {
     color: #e34c26
@@ -51,4 +55,13 @@ color: gray;
 
 .js-icon{
     color:#F0DB4F;
+}
+.angular-icon{
+    color: rgb(213, 37, 37);
+}
+.react-icon{
+    color: rgb(47, 56, 189);
+}
+.bootstrap-icon{
+    color: rgb(118, 37, 108);
 }
