@@ -30,9 +30,9 @@ export default function Timeline() {
 
     return (
         <div className="flex w-full my-40">
-            <div className="flex flex-col w-full justify-center items-center">
+            <div className="flex flex-col w-full justify-center items-center lg:gap-20">
                 <div className="text-3xl p-5 lg:p-0 font-bold color-primary">CARRERA</div>
-                <div className="flex flex-col lg:flex-row w-full justify-start lg:justify-center items-center y-20 grid grid-cols-5 grid-rows-1 lg:grid-cols-1 grid-rows-2">
+                <div className="flex flex-row gap-y-20 lg:flex-row w-full justify-start lg:justify-center items-center y-20 grid grid-cols-5 grid-rows-none	 lg:grid-cols-1 grid-rows-2">
                     {loading ? <span className='col-auto'></span> : ''}
                     {
                         (timeLines && timeLines.length > 0) ? (

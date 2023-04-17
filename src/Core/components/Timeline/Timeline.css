@@ -5,12 +5,14 @@
     border-radius: 50%;
     padding-top: 0.6rem;
     box-shadow: rgba(14, 30, 37, 0.12) 0px 1px 2px 0px, var(--color-secondary) 0px 1px 8px 0px;
+    cursor: pointer;
 
 }
 
 .dot-selected{
     animation: blink-dot 2s ease-in infinite;
     background: var(--color-primary) !important;
+    cursor: pointer;
 }
 
 .line {
@@ -28,6 +30,7 @@
         background: var(--color-secondary);
         border-radius: 50%;
         padding-top: 0.6rem;
+        cursor: pointer;
     }
     
     .line {
