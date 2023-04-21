@@ -49,7 +49,7 @@ export const ContactUs = () => {
         
     },[blockForm])
     return (
-        <div id='form' className='w-full lg:w-1/4 mt-52 mb-20 mx-auto'>
+        <div id='form' className='w-full lg:w-1/4 mt-52 mb-40 mx-auto'>
             <ToastContainer
                 position="top-center"
                 autoClose={3000}
