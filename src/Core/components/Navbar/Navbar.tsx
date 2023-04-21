@@ -1,25 +1,33 @@
-import { Fragment, useState } from 'react'
-import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
+import { useState } from 'react'
+import { Dialog, Popover } from '@headlessui/react'
 import {
-    ArrowPathIcon,
     Bars3Icon,
-    ChartPieIcon,
-    CursorArrowRaysIcon,
-    FingerPrintIcon,
-    SquaresPlusIcon,
     XMarkIcon,
 } from '@heroicons/react/24/outline'
-import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
-import './Navbar.css'
-function classNames(...classes: string[]) {
-    return classes.filter(Boolean).join(' ')
+import './Navbar.css';
+
+function scrollTo(id: any) {
+    document.querySelector(id).scrollIntoView({
+        block: 'center',
+        inline: 'center',
+        behavior: 'smooth'
+    });
 }
 
 export default function Navbar() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
+    const goTo = (id: any) => {
+        scrollTo(id)
+    }
+
+    const goToMobile = (id: any) => {
+        setMobileMenuOpen(false)
+        scrollTo(id)
+    }
+
     return (
-        <header className="bg-white">
+        <header id='header' className="bg-white">
             <nav className="mx-auto flex items-center justify-between p-6 lg:px-44" aria-label="Global">
                 <div className="flex lg:flex-1">
                     <span className='text-2xl font-bold color-primary'>jorgegv.dev</span>
@@ -30,32 +38,31 @@ export default function Navbar() {
                         className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
                         onClick={() => setMobileMenuOpen(true)}
                     >
-                        <span className="sr-only">Open main menu</span>
                         <Bars3Icon className="h-6 w-6" aria-hidden="true" />
                     </button>
                 </div>
                 <Popover.Group className="hidden lg:flex lg:gap-x-12">
                     <a
-                        href="#"
-                        className="-mx-3 block rounded-lg py-2 px-3 text-base font-bold leading-7"
+                        onClick={() => { goTo('#header') }}
+                        className="-mx-3 cursor-pointer block rounded-lg py-2 px-3 text-base font-bold leading-7"
                     >
                         Inicio
                     </a>
                     <a
-                        href="#"
-                        className="-mx-3 block rounded-lg py-2 px-3 text-base font-bold leading-7"
+                        onClick={() => { goTo('#about') }}
+                        className="-mx-3 cursor-pointer block rounded-lg py-2 px-3 text-base font-bold leading-7"
                     >
                         Sobre mí
                     </a>
                     <a
-                        href="#"
-                        className="-mx-3 block rounded-lg py-2 px-3 text-base font-bold leading-7"
+                        onClick={() => { goTo('#experience') }}
+                        className="-mx-3 cursor-pointer block rounded-lg py-2 px-3 text-base font-bold leading-7"
                     >
                         Carrera
                     </a>
                     <a
-                        href="#"
-                        className="-mx-3 block rounded-lg py-2 px-3 text-base font-bold leading-7"
+                        onClick={() => { goTo('#form') }}
+                        className="-mx-3 cursor-pointer block rounded-lg py-2 px-3 text-base font-bold leading-7"
                     >
                         Contacto
                     </a>
@@ -80,22 +87,28 @@ export default function Navbar() {
                     <div className="mt-6 flow-root">
                         <div className="w-full flex flex-col justify-center items-center">
                             <a
-                                href="#"
+                                onClick={() => { goToMobile('#header') }}
                                 className="-mx-3 block rounded-lg py-2 px-3 text-base font-bold leading-7"
                             >
                                 Inicio
                             </a>
                             <a
-                                href="#"
+                                onClick={() => { goToMobile('#about') }}
+                                className="-mx-3 block rounded-lg py-2 px-3 text-base font-bold leading-7"
+                            >
+                                Sobre mí
+                            </a>
+                            <a
+                                onClick={() => { goToMobile('#experience') }}
                                 className="-mx-3 block rounded-lg py-2 px-3 text-base font-bold leading-7"
                             >
                                 Carrera
                             </a>
                             <a
-                                href="#"
+                                onClick={() => { goToMobile('#form') }}
                                 className="-mx-3 block rounded-lg py-2 px-3 text-base font-bold leading-7"
                             >
-                                Company
+                                Contacto
                             </a>
                         </div>
                     </div>

@@ -7,7 +7,7 @@ import { ContactUs } from '../Contact/Contact';
 
 function App() {
   return (
-    <div className="App h-full w-full px-5 lg:px-auto">
+    <div className="App h-full w-full px-5 lg:px-auto scroll-smooth">
       <Navbar/>
       <Intro/>
       <AboutMe/>

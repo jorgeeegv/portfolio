@@ -16,8 +16,10 @@ export default function Intro() {
         <div className="w-full mt-9 lg:my-40 flex gap-x-20 items-center justify-center grid grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-1">
             <div className="col-span-1 w-full lg:w-auto flex flex-col justify-center items-end">
                 <div className='w-full lg:max-w-xl flex flex-col gap-y-2'>
-                    <div className="lg:inline-block typing text-title text-center lg:text-start lg:text-5xl font-bold">Front-End Developer</div>
-                    <div className='inline-block m-5 lg:m-auto text-1xl font-bold subtitle-text text-center lg:text-justify'>
+                    <div className="lg:inline-block text-center lg:text-start font-bold title-section">
+                        <h5 className='inline-block typing p-1 text-4xl lg:text-6xl'>Front-End Developer</h5>
+                        </div>
+                    <div className='inline-block m-5 lg:m-auto text-1xl font-semibold subtitle-text text-center lg:text-justify'>
                         <span className='text-justify'>Hola! Soy Jorge García. Un apasionado del desarrollo Front-End y el diseño UX/UI.
                             Ubicado en Valencia, España.</span>
                         <img className='img-emoji-small inline-block mb-1' src={process.env.PUBLIC_URL + '/imgs/round-pushpin.png'} alt="" />
@@ -28,8 +30,12 @@ export default function Intro() {
                             <img className='img-emoji' src={process.env.PUBLIC_URL + '/imgs/waving_hand.png'} alt="" />
                         </div>
                         <div className='flex flex-row gap-x-1 lg:gap-x-2'>
-                            <FontAwesomeIcon icon={faSquareGithub} className='hook-icons' />
-                            <FontAwesomeIcon icon={faLinkedin} className='hook-icons' />
+                            <a target='_blank' href='https://github.com/jorgegv98'>
+                                <FontAwesomeIcon icon={faSquareGithub} className='hook-icons cursor-pointer' />
+                            </a>
+                            <a target='_blank' href='https://www.linkedin.com/in/jorge-garc%C3%ADa-villa/'>
+                                <FontAwesomeIcon icon={faLinkedin} className='hook-icons cursor-pointer' />
+                            </a>
                         </div>
                     </div>
                 </div>
