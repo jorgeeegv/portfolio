@@ -8,7 +8,7 @@ export default function AboutMe() {
             <div className="col-span-1 w-full grid grid-cols-1 grid-rows-1 lg:grid-cols-2 lg:grid-rows-1">
                 <div className='flex flex-col lg:gap-5'>
                     <div>
-                        <div className="text-4xl text-center py-5 lg:text-start lg:p-0 font-bold color-primary title-section">SOBRE MI</div>
+                        <div className="text-3xl text-center py-5 lg:text-start lg:p-0 font-bold color-primary">SOBRE MI</div>
                     </div>
                     <div className='inline-block text-1xl font-weight-500 subtitle-text text-center lg:text-start '>
                         <span>

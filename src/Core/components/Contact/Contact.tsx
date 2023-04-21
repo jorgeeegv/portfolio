@@ -64,7 +64,7 @@ export const ContactUs = () => {
             />
             <form onSubmit={handleSubmit(onSubmit)} ref={(e) => { form.current = e}}>
                 <div className="pb-12 w-full">
-                    <h2 className="text-4xl sm:mx-auto text-center font-semibold color-primary title-section">CONTÁCTAME</h2>
+                    <h2 className="text-3xl sm:mx-auto text-center font-bold color-primary title-section">CONTÁCTAME</h2>
                     <div className="mt-10 flex flex-col w-full gap-y-5">
                         <div className="">
                             <label htmlFor="first-name" className={(errors.user_name ? 'color-danger' : '') + " block pl-1 text-1xl font-semibold color-primary"}>

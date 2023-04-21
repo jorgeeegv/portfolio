@@ -17,7 +17,7 @@ export default function Intro() {
             <div className="col-span-1 w-full lg:w-auto flex flex-col justify-center items-end">
                 <div className='w-full lg:max-w-xl flex flex-col gap-y-2'>
                     <div className="lg:inline-block text-center lg:text-start font-bold title-section">
-                        <h5 className='inline-block typing p-1 text-4xl lg:text-6xl'>Front-End Developer</h5>
+                        <h5 className='inline-block typing p-1 text-2xl lg:text-5xl'>Front-End Developer</h5>
                         </div>
                     <div className='inline-block m-5 lg:m-auto text-1xl font-semibold subtitle-text text-center lg:text-justify'>
                         <span className='text-justify'>Hola! Soy Jorge García. Un apasionado del desarrollo Front-End y el diseño UX/UI.
