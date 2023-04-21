@@ -2,7 +2,7 @@ import './AboutMe.css'
 export default function AboutMe() {
     return (
         <div id='about' className="w-full mt-40 mb-56 lg:my-64 flex gap-x-20 grid grid-cols-1 grid-rows-1 lg:grid-cols-2 lg:grid-rows-1">
-            <div className="col-span-1 lg:flex lg:justify-end lg:items-end lg:w-full lg:h-full">
+            <div className="col-span-1 flex justify-center lg:justify-end items-end lg:w-full lg:h-full">
                 <img className="img-about-me deep-effect" src={process.env.PUBLIC_URL + '/imgs/jorge2.jpg'} />
             </div>
             <div className="col-span-1 w-full grid grid-cols-1 grid-rows-1 lg:grid-cols-2 lg:grid-rows-1">

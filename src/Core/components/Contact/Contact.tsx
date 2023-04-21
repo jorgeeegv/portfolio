@@ -117,7 +117,7 @@ export const ContactUs = () => {
                         </div>
                     </div>
                 </div>
-                <div className='w-full mx-auto'>
+                <div className='w-80 lg:w-full mx-auto'>
                     <button className={((!isValid || blockForm) ? 'cta-invalid' : 'cta') + " w-full send-text"} type="submit">
                         <span className='text-2xl mx-auto font-bold flex gap-x-2'>ENVIAR
                             <FontAwesomeIcon icon={faPaperPlane} className='' />
