@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { emailConfig } from '../../../constants/emailjs.constants';
 import './Contact.css'
@@ -7,13 +7,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane } from '@fortawesome/free-regular-svg-icons';
 import { useForm } from 'react-hook-form';
 import { ToastContainer, toast } from 'react-toastify';
+import { useTranslation } from 'react-i18next';
 
-interface ContactForm {
-    name: any;
-    email: any;
-    message: any;
-}
 export const ContactUs = () => {
+    const [t] = useTranslation("global");
     const { register, handleSubmit, reset, formState: { errors, isValid } } = useForm({ mode: 'onChange' });
     const [blockForm, setBlockForm] = useState(false);
     const form = useRef<any>(null);
@@ -45,9 +42,7 @@ export const ContactUs = () => {
             });
         });
     }
-    useEffect(()=>{
-        
-    },[blockForm])
+
     return (
         <div id='form' className='w-full lg:w-1/4 mt-52 mb-40 mx-auto'>
             <ToastContainer
@@ -64,18 +59,18 @@ export const ContactUs = () => {
             />
             <form onSubmit={handleSubmit(onSubmit)} ref={(e) => { form.current = e}}>
                 <div className="pb-12 w-full">
-                    <h2 className="text-3xl sm:mx-auto text-center font-bold color-primary title-section">CONTÁCTAME</h2>
+                    <h2 className="text-3xl sm:mx-auto text-center font-bold color-primary title-section">{t("contact.title")}</h2>
                     <div className="mt-10 flex flex-col w-full gap-y-5">
                         <div className="">
                             <label htmlFor="first-name" className={(errors.user_name ? 'color-danger' : '') + " block pl-1 text-1xl font-semibold color-primary"}>
-                                Nombre
+                            {t("contact.label.name")}
                             </label>
                             <div className="mt-2">
                                 <input
                                     type="text"
                                     id="user_name"
                                     className={(errors.user_name ? 'error-input' : '') + " primary-input block w-full rounded-md py-1.5 sm:text-sm sm:leading-6 "}
-                                    placeholder="Nombre Apellido..."
+                                    placeholder={"Nombre y apellidos"}
                                     {...register("user_name", { disabled: blockForm, required: 'El nombre es requerido' })}
                                 />
                                 {errors.user_name && <small role='alert' className='color-danger p-1'>{errors.user_name.message?.toString()}</small>}
@@ -105,8 +100,8 @@ export const ContactUs = () => {
                             </div>
                         </div>
                         <div className="">
-                            <label htmlFor="email" className={"block text-1xl font-semibold color-primary "}>
-                                Mensaje
+                            <label htmlFor="user_message" className={"block text-1xl font-semibold color-primary "}>
+                            {t("contact.label.message")}
                             </label>
                             <div className="mt-2">
                                 <textarea placeholder='Escribe algo...'
@@ -119,7 +114,7 @@ export const ContactUs = () => {
                 </div>
                 <div className='w-80 lg:w-full mx-auto'>
                     <button className={((!isValid || blockForm) ? 'cta-invalid' : 'cta') + " w-full send-text"} type="submit">
-                        <span className='text-2xl mx-auto font-bold flex gap-x-2'>ENVIAR
+                        <span className='text-2xl mx-auto font-bold flex gap-x-2'>{t("contact.button.send")}
                             <FontAwesomeIcon icon={faPaperPlane} className='' />
                         </span>
                     </button>

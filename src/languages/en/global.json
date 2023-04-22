@@ -1,0 +1,37 @@
+{
+    "navbar": {
+        "button" : {
+            "init": "Init",
+            "about": "About me",
+            "experience": "Experience",
+            "contact": "Contact"
+        }
+    },
+    "intro": {
+        "subtitle": "Hi! I'm Jorge García. Passionate about Front-End development and UX/UI design. Located in Valencia, Spain.",
+        "tecnologies": "Tecnologies:"
+    },
+    "about":{
+        "title": "ABOUT ME",
+        "content": "From a very young age I loved to design and draw. When I started programming, I always had a special taste for layout, information structure and style. As a Front-End programmer I have knowledge of HTML, CSS, Javascript, TypeScript, Mock-up tools and sketches like Figma, as well as the use of these technologies to create responsive websites. I have been trained in areas of teamwork and constant communication with the client for a good product quality."
+    },
+    "experience": {
+        "title": "EXPERIENCE"
+    },
+    "contact": {
+        "title": "CONTACT ME!",
+        "label": {
+            "name": "Name",
+            "email": "Email",
+            "message": "Message"
+        },
+        "placeholder": {
+            "name": "Name and surnames",
+            "email": "example@example.com",
+            "message": "Write a message..."
+        },
+        "button": {
+            "send": "SEND"
+        }
+    }
+}

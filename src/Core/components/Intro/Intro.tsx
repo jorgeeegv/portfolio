@@ -1,4 +1,5 @@
 import './Intro.css'
+import { useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faSquareGithub,
@@ -12,6 +13,7 @@ import {
     faBootstrap
 } from "@fortawesome/free-brands-svg-icons";
 export default function Intro() {
+    const [t,i18n] = useTranslation("global");
     return (
         <div className="w-full mt-9 lg:my-40 flex gap-x-20 items-center justify-center grid grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-1">
             <div className="col-span-1 w-full lg:w-auto flex flex-col justify-center items-end">
@@ -20,8 +22,7 @@ export default function Intro() {
                         <h5 className='inline-block typing p-1 text-2xl lg:text-5xl'>Front-End Developer</h5>
                         </div>
                     <div className='inline-block m-5 lg:m-auto text-1xl font-semibold subtitle-text text-center lg:text-justify'>
-                        <span className='text-justify'>Hola! Soy Jorge García. Un apasionado del desarrollo Front-End y el diseño UX/UI.
-                            Ubicado en Valencia, España.</span>
+                        <span className='text-justify'>{t('intro.subtitle')}</span>
                         <img className='img-emoji-small inline-block mb-1' src={process.env.PUBLIC_URL + '/imgs/round-pushpin.png'} alt="" />
                     </div>
                     <div className='flex flex-row justify-center gap-x-10 lg:gap-x-0 lg:justify-between items-center'>
@@ -40,7 +41,7 @@ export default function Intro() {
                     </div>
                 </div>
                 <div className=' pt-10 lg:pt-20 justify-between gap-y-5 lg:gap-y-0 items-end flex flex-col w-full lg:w-auto justify-center items-center lg:justify-start lg:items-start lg:flex-row'>
-                    <span className='font-bold text-1xl pr-1 lg:mr-10'>Tecnologías </span>
+                    <span className='font-bold text-1xl pr-1 lg:mr-10'>{t('intro.tecnologies')}</span>
                     <div className='flex flex-row gap-x-4 justify-center lg:justify-start'>
                         <FontAwesomeIcon icon={faHtml5} className='tech-icon html-icon' />
                         <FontAwesomeIcon icon={faCss3Alt} className='tech-icon css-icon' />

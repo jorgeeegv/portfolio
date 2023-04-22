@@ -1,4 +1,4 @@
-import React, { ReactNode, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Timeline.css';
 import TimelineSrv from '../../../Services/TimelineSrv';
 import { Timeline as TimelineModel } from "../../../Models/Timeline";
