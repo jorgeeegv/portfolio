@@ -2,15 +2,19 @@ import React, { useEffect, useState } from 'react';
 import './Timeline.css';
 import TimelineSrv from '../../../Services/TimelineSrv';
 import { Timeline as TimelineModel } from "../../../Models/Timeline";
+import { useTranslation } from 'react-i18next';
 
 export default function Timeline() {
+    const [t,i18n] = useTranslation("global");
     const [loading, setLoading] = useState<Boolean>(true);
     const [timeLines, setTimelines] = useState<TimelineModel[]>([]);
     const [timeLineSelected, setTimeline] = useState<TimelineModel>({});
     const [slideIn, setSlideInAnimation] = useState<boolean>(false);
 
     useEffect(() => {
-        setTimelines(TimelineSrv.getTimeLines());
+        let timeLines  = TimelineSrv.getTimeLinesES();
+        if (i18n.language === 'en') timeLines = TimelineSrv.getTimeLinesEN();
+        setTimelines(timeLines);
         setLoading(false)
     }, [])
 
@@ -21,7 +25,12 @@ export default function Timeline() {
     useEffect(() => {
         setSlideInAnimation(true)
     }, [timeLineSelected])
-
+    useEffect(() => {
+        let timeLines  = TimelineSrv.getTimeLinesES();
+        if (i18n.language === 'en') timeLines = TimelineSrv.getTimeLinesEN();
+        setTimelines(timeLines);
+        setSlideInAnimation(true)
+    }, [i18n.language])
 
     const selectTimeline =  (timeline: React.SetStateAction<TimelineModel>) => {
         setSlideInAnimation(false);
@@ -31,7 +40,7 @@ export default function Timeline() {
     return (
         <div id='experience' className="flex w-full my-40">
             <div className="flex flex-col w-full justify-center items-center lg:gap-20">
-                <div className="text-3xl p-5 lg:p-0 font-bold color-primary title-section">CARRERA</div>
+                <div className="text-3xl p-5 lg:p-0 font-bold color-primary title-section">{t('experience.title')}</div>
                 <div className="flex flex-row gap-y-20 lg:flex-row w-full justify-start lg:justify-center items-center y-20 grid grid-cols-5 grid-rows-none	 lg:grid-cols-1 grid-rows-2">
                     {loading ? <span className='col-auto'></span> : ''}
                     {

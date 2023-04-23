@@ -20,15 +20,19 @@ function App() {
     });
   }, []);
   return (
-    <div className="App h-full w-full px-5 lg:px-auto scroll-smooth">
-      <div onClick={() => scrollTo('#header')} className={showScrollTopButton ? 'scroll-top-button' : 'hidden'}>
+    <div className="App h-full w-full scroll-smooth">
+      <div onClick={() => scrollTo('#intro')} className={showScrollTopButton ? 'scroll-top-button' : 'hidden'}>
         <FontAwesomeIcon icon={faArrowUp} />
       </div>
-      <Navbar />
-      <Intro />
-      <AboutMe />
-      <Timeline />
-      <ContactUs />
+      <div className='header bg-white'>
+        <Navbar />
+      </div>
+      <div className='px-5 lg:px-auto'>
+        <Intro />
+        <AboutMe />
+        <Timeline />
+        <ContactUs /> 
+      </div>
     </div>
   );
 }

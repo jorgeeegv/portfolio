@@ -15,11 +15,11 @@ import {
 export default function Intro() {
     const [t,i18n] = useTranslation("global");
     return (
-        <div className="w-full mt-9 lg:my-40 flex gap-x-20 items-center justify-center grid grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-1">
+        <div id="intro" className="w-full mt-9 lg:my-40 flex gap-x-20 items-center justify-center grid grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-1">
             <div className="col-span-1 w-full lg:w-auto flex flex-col justify-center items-end">
                 <div className='w-full lg:max-w-xl flex flex-col gap-y-2'>
                     <div className="lg:inline-block text-center lg:text-start font-bold title-section">
-                        <h5 className='inline-block typing p-1 text-2xl lg:text-5xl'>Front-End Developer</h5>
+                        <h5 className='inline-block typing p-1 text-3xl lg:text-5xl'>Front-End Developer</h5>
                         </div>
                     <div className='inline-block m-5 lg:m-auto text-1xl font-semibold subtitle-text text-center lg:text-justify'>
                         <span className='text-justify'>{t('intro.subtitle')}</span>
@@ -55,7 +55,7 @@ export default function Intro() {
                 </div>
             </div>
             <div className="col-span-1 py-8 lg:py-0 flex justify-center items-start lg:flex lg:justify-start lg:items-start">
-                <img className="img-intro" src={process.env.PUBLIC_URL + '/imgs/jorge.jpg'} alt="" />
+                <img className="img-intro" src={process.env.PUBLIC_URL + '/imgs/jorge3.jpg'} alt="" />
             </div>
         </div>
     );

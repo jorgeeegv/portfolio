@@ -10,7 +10,7 @@ import { scrollTo } from '../../../Utils/window.utils';
 
 
 export default function Navbar() {
-    const [t,i18n] = useTranslation("global");
+    const [t, i18n] = useTranslation("global");
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
     const goTo = (id: any) => {
         scrollTo(id)
@@ -21,9 +21,9 @@ export default function Navbar() {
         scrollTo(id)
     }
 
-    useEffect(()=>{
+    useEffect(() => {
 
-    },[i18n.language])
+    }, [i18n.language])
 
     return (
         <header id='header' className="bg-white">
@@ -42,34 +42,34 @@ export default function Navbar() {
                 </div>
                 <Popover.Group className="hidden lg:flex lg:gap-x-40">
                     <div className="flex gap-x-12">
-                    <a
-                        onClick={() => { goTo('#header') }}
-                        className="-mx-3 cursor-pointer block rounded-lg py-2 px-3 text-base font-bold leading-7"
-                    >
-                        {t("navbar.button.init")}
-                    </a>
-                    <a
-                        onClick={() => { goTo('#about') }}
-                        className="-mx-3 cursor-pointer block rounded-lg py-2 px-3 text-base font-bold leading-7"
-                    >
-                        {t("navbar.button.about")}
-                    </a>
-                    <a
-                        onClick={() => { goTo('#experience') }}
-                        className="-mx-3 cursor-pointer block rounded-lg py-2 px-3 text-base font-bold leading-7"
-                    >
-                        {t("navbar.button.experience")}
-                    </a>
-                    <a
-                        onClick={() => { goTo('#form') }}
-                        className="-mx-3 cursor-pointer block rounded-lg py-2 px-3 text-base font-bold leading-7"
-                    >
-                        {t("navbar.button.contact")}
-                    </a>
+                        <a
+                            onClick={() => { goTo('#header') }}
+                            className="-mx-3 cursor-pointer block rounded-lg py-2 px-3 text-base font-bold leading-7"
+                        >
+                            {t("navbar.button.init")}
+                        </a>
+                        <a
+                            onClick={() => { goTo('#about') }}
+                            className="-mx-3 cursor-pointer block rounded-lg py-2 px-3 text-base font-bold leading-7"
+                        >
+                            {t("navbar.button.about")}
+                        </a>
+                        <a
+                            onClick={() => { goTo('#experience') }}
+                            className="-mx-3 cursor-pointer block rounded-lg py-2 px-3 text-base font-bold leading-7"
+                        >
+                            {t("navbar.button.experience")}
+                        </a>
+                        <a
+                            onClick={() => { goTo('#form') }}
+                            className="-mx-3 cursor-pointer block rounded-lg py-2 px-3 text-base font-bold leading-7"
+                        >
+                            {t("navbar.button.contact")}
+                        </a>
                     </div>
                     <div className='flex items-center justify-end gap-x-5'>
-                        <img onClick={() => { i18n.changeLanguage('es')}} src={process.env.PUBLIC_URL + '/imgs/es.png'} className={'icon language-icon ' + ((i18n.language && i18n.language === 'es')  ?  'deep-effect' : 'language-icon-disabled '  )}/>
-                        <img onClick={() => { i18n.changeLanguage('en')}} src={process.env.PUBLIC_URL + '/imgs/en.png'} className={'icon language-icon ' + ((i18n.language && i18n.language === 'en')  ?  'deep-effect' : 'language-icon-disabled '  )}/>
+                        <img onClick={() => { i18n.changeLanguage('es') }} src={process.env.PUBLIC_URL + '/imgs/es.png'} className={'icon language-icon ' + ((i18n.language && i18n.language === 'es') ? 'deep-effect' : 'language-icon-disabled ')} />
+                        <img onClick={() => { i18n.changeLanguage('en') }} src={process.env.PUBLIC_URL + '/imgs/en.png'} className={'icon language-icon ' + ((i18n.language && i18n.language === 'en') ? 'deep-effect' : 'language-icon-disabled ')} />
                     </div>
                 </Popover.Group>
             </nav>
@@ -85,7 +85,7 @@ export default function Navbar() {
                             className="-m-2.5 rounded-md p-2.5 text-gray-700"
                             onClick={() => setMobileMenuOpen(false)}
                         >
-                            <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                            <XMarkIcon className="h-6 w-6 color-primary" aria-hidden="true" />
                         </button>
                     </div>
                     <div className="mt-6 flow-root">
@@ -114,6 +114,10 @@ export default function Navbar() {
                             >
                                 {t("navbar.button.contact")}
                             </a>
+                        </div>
+                        <div className='flex items-center justify-end gap-x-5 mt-10'>
+                            <img onClick={() => { i18n.changeLanguage('es') }} src={process.env.PUBLIC_URL + '/imgs/es.png'} className={'icon language-icon ' + ((i18n.language && i18n.language === 'es') ? 'deep-effect' : 'language-icon-disabled ')} />
+                            <img onClick={() => { i18n.changeLanguage('en') }} src={process.env.PUBLIC_URL + '/imgs/en.png'} className={'icon language-icon ' + ((i18n.language && i18n.language === 'en') ? 'deep-effect' : 'language-icon-disabled ')} />
                         </div>
                     </div>
                 </Dialog.Panel>
