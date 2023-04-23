@@ -12,6 +12,8 @@ function App() {
   const [showScrollTopButton, setShowScrollTopButton] = useState(false);
   useEffect(() => {
     window.addEventListener('scroll', () => {
+      if(window.scrollY > 50) document.querySelector('.header')?.classList.add('header-deep')
+      else document.querySelector('.header')?.classList.remove('header-deep');
       if (window.scrollY > 600) {
         setShowScrollTopButton(true);
       } else {
@@ -27,7 +29,7 @@ function App() {
       <div className='header bg-white'>
         <Navbar />
       </div>
-      <div className='px-5 lg:px-auto'>
+      <div className='px-5 py-20 lg:py-auto lg:px-auto'>
         <Intro />
         <AboutMe />
         <Timeline />

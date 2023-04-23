@@ -44,25 +44,25 @@ export default function Navbar() {
                     <div className="flex gap-x-12">
                         <a
                             onClick={() => { goTo('#header') }}
-                            className="-mx-3 cursor-pointer block rounded-lg py-2 px-3 text-base font-bold leading-7"
+                            className="cursor-pointer block rounded-lg py-2 px-3 text-base font-bold leading-7"
                         >
                             {t("navbar.button.init")}
                         </a>
                         <a
                             onClick={() => { goTo('#about') }}
-                            className="-mx-3 cursor-pointer block rounded-lg py-2 px-3 text-base font-bold leading-7"
+                            className="cursor-pointer block rounded-lg py-2 px-3 text-base font-bold leading-7"
                         >
                             {t("navbar.button.about")}
                         </a>
                         <a
                             onClick={() => { goTo('#experience') }}
-                            className="-mx-3 cursor-pointer block rounded-lg py-2 px-3 text-base font-bold leading-7"
+                            className="cursor-pointer block rounded-lg py-2 px-3 text-base font-bold leading-7"
                         >
                             {t("navbar.button.experience")}
                         </a>
                         <a
                             onClick={() => { goTo('#form') }}
-                            className="-mx-3 cursor-pointer block rounded-lg py-2 px-3 text-base font-bold leading-7"
+                            className="cursor-pointer block rounded-lg py-2 px-3 text-base font-bold leading-7"
                         >
                             {t("navbar.button.contact")}
                         </a>
