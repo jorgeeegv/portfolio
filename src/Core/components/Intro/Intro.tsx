@@ -45,11 +45,11 @@ export default function Intro() {
                     <div className='flex flex-row gap-x-4 justify-center lg:justify-start'>
                         <FontAwesomeIcon icon={faHtml5} className='tech-icon html-icon' />
                         <FontAwesomeIcon icon={faCss3Alt} className='tech-icon css-icon' />
-                        <FontAwesomeIcon icon={faJs} className='tech-icon js-icon' />
+                        <img src={process.env.PUBLIC_URL + '/imgs/js.png'} className='tech-icon ' />
                         <FontAwesomeIcon icon={faAngular} className='tech-icon angular-icon ' />
                         <FontAwesomeIcon icon={faBootstrap} className='tech-icon bootstrap-icon' />
-                        <FontAwesomeIcon icon={faReact} className='tech-icon react-icon' />
-                        <FontAwesomeIcon icon={faFigma} className='tech-icon ' />
+                        <img src={process.env.PUBLIC_URL + '/imgs/react.png'} className='tech-icon ' />
+                        <img src={process.env.PUBLIC_URL + '/imgs/figma.png'} className='tech-icon ' />
 
                     </div>
                 </div>

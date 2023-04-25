@@ -14,7 +14,7 @@ function App() {
     window.addEventListener('scroll', () => {
       if(window.scrollY > 50) document.querySelector('.header')?.classList.add('header-deep')
       else document.querySelector('.header')?.classList.remove('header-deep');
-      if (window.scrollY > 600) {
+      if (window.scrollY > 300) {
         setShowScrollTopButton(true);
       } else {
         setShowScrollTopButton(false);
@@ -23,13 +23,16 @@ function App() {
   }, []);
   return (
     <div className="App h-full w-full scroll-smooth">
-      <div onClick={() => scrollTo('#intro')} className={showScrollTopButton ? 'scroll-top-button' : 'hidden'}>
+      <div onClick={() => {
+        if (window.innerWidth < 844) scrollTo('#intro','start','center')
+        else scrollTo('#intro','center','center')}
+        } className={showScrollTopButton ? 'scroll-top-button' : 'hidden'}>
         <FontAwesomeIcon icon={faArrowUp} />
       </div>
       <div className='header bg-white'>
         <Navbar />
       </div>
-      <div className='px-5 py-20 lg:py-auto lg:px-auto'>
+      <div className='px-5 py-auto lg:py-auto md:py-auto md:px-auto lg:px-auto'>
         <Intro />
         <AboutMe />
         <Timeline />

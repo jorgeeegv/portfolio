@@ -13,12 +13,12 @@ export default function Navbar() {
     const [t, i18n] = useTranslation("global");
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
     const goTo = (id: any) => {
-        scrollTo(id)
+        scrollTo(id,'center','center')
     }
 
     const goToMobile = (id: any) => {
         setMobileMenuOpen(false)
-        scrollTo(id)
+        scrollTo(id,'center','center')
     }
 
     useEffect(() => {
@@ -43,26 +43,26 @@ export default function Navbar() {
                 <Popover.Group className="hidden lg:flex lg:gap-x-40">
                     <div className="flex gap-x-12">
                         <a
-                            onClick={() => { goTo('#header') }}
-                            className="cursor-pointer block rounded-lg py-2 px-3 text-base font-bold leading-7"
+                            onClick={() => { goTo('#intro') }}
+                            className="cursor-pointer desktop-nav-button block rounded-lg py-2 px-3 text-base font-bold leading-7"
                         >
                             {t("navbar.button.init")}
                         </a>
                         <a
                             onClick={() => { goTo('#about') }}
-                            className="cursor-pointer block rounded-lg py-2 px-3 text-base font-bold leading-7"
+                            className="cursor-pointer desktop-nav-button block rounded-lg py-2 px-3 text-base font-bold leading-7"
                         >
                             {t("navbar.button.about")}
                         </a>
                         <a
                             onClick={() => { goTo('#experience') }}
-                            className="cursor-pointer block rounded-lg py-2 px-3 text-base font-bold leading-7"
+                            className="cursor-pointer desktop-nav-button block rounded-lg py-2 px-3 text-base font-bold leading-7"
                         >
                             {t("navbar.button.experience")}
                         </a>
                         <a
                             onClick={() => { goTo('#form') }}
-                            className="cursor-pointer block rounded-lg py-2 px-3 text-base font-bold leading-7"
+                            className="cursor-pointer desktop-nav-button block rounded-lg py-2 px-3 text-base font-bold leading-7"
                         >
                             {t("navbar.button.contact")}
                         </a>
@@ -82,7 +82,7 @@ export default function Navbar() {
                         </div>
                         <button
                             type="button"
-                            className="-m-2.5 rounded-md p-2.5 text-gray-700"
+                            className="-m-2.5 rounded-md p-2.5 color-primary"
                             onClick={() => setMobileMenuOpen(false)}
                         >
                             <XMarkIcon className="h-6 w-6 color-primary" aria-hidden="true" />
@@ -91,26 +91,26 @@ export default function Navbar() {
                     <div className="mt-6 flow-root">
                         <div className="w-full flex flex-col justify-center items-center">
                             <a
-                                onClick={() => { goToMobile('#header') }}
-                                className="-mx-3 block rounded-lg py-2 px-3 text-base font-bold leading-7"
+                                onClick={() => { goToMobile('#intro') }}
+                                className="-mx-3 block color-primary rounded-lg py-2 px-3 text-base font-bold leading-7"
                             >
                                 {t("navbar.button.init")}
                             </a>
                             <a
                                 onClick={() => { goToMobile('#about') }}
-                                className="-mx-3 block rounded-lg py-2 px-3 text-base font-bold leading-7"
+                                className="-mx-3 block color-primary rounded-lg py-2 px-3 text-base font-bold leading-7"
                             >
                                 {t("navbar.button.about")}
                             </a>
                             <a
                                 onClick={() => { goToMobile('#experience') }}
-                                className="-mx-3 block rounded-lg py-2 px-3 text-base font-bold leading-7"
+                                className="-mx-3 block color-primary rounded-lg py-2 px-3 text-base font-bold leading-7"
                             >
                                 {t("navbar.button.experience")}
                             </a>
                             <a
                                 onClick={() => { goToMobile('#form') }}
-                                className="-mx-3 block rounded-lg py-2 px-3 text-base font-bold leading-7"
+                                className="-mx-3 block color-primary rounded-lg py-2 px-3 text-base font-bold leading-7"
                             >
                                 {t("navbar.button.contact")}
                             </a>

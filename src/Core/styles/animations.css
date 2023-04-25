@@ -107,7 +107,8 @@
 
 @keyframes slideInFromRight {
     0% {
-        transform: translateX(-10%);
+        transform: translateX(20%);
+
     }
 
     100% {
@@ -151,4 +152,30 @@
 
 .animation-right-3 {
     animation: 1.4s ease-out 0s 1 slideInFromRight;
+}
+
+.hidden-right-1{
+    transition: all 1.5s;
+    transform: translateX(+100%);
+}
+.show-right-1{
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+.hidden-right-2{
+    transition: all 2s;
+    transform: translateX(+100%);
+}
+.show-right-2{
+    opacity: 1;
+    transform: translateX(0%);
+}
+.hidden-right-3{
+    transition: all 2.5s;
+    transform: translateX(+100%);
+}
+.show-right-3{
+    opacity: 1;
+    transform: translateX(0%);
 }
