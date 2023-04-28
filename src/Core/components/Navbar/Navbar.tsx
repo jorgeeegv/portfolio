@@ -11,15 +11,19 @@ import { scrollTo } from '../../../Utils/window.utils';
 
 export default function Navbar() {
     const [t, i18n] = useTranslation("global");
-    const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [scrollToMobile, goScrollMobile] = useState(null);
     const goTo = (id: any) => {
-        scrollTo(id,'center','center')
+        scrollTo(id, 'center', 'center')
     }
 
     const goToMobile = (id: any) => {
+        goScrollMobile(id);
         setMobileMenuOpen(false)
-        scrollTo(id,'center','center')
     }
+    useEffect(() => {
+        if (scrollToMobile) scrollTo(scrollToMobile, 'center', 'center')
+    }, [scrollToMobile])
 
     useEffect(() => {
 
@@ -65,6 +69,13 @@ export default function Navbar() {
                             className="cursor-pointer desktop-nav-button block rounded-lg py-2 px-3 text-base font-bold leading-7"
                         >
                             {t("navbar.button.contact")}
+                        </a>
+                        <a
+                            href={process.env.PUBLIC_URL + '/docs/cv_'+i18n.language +'.pdf'}
+                            target='_blank'
+                            className="cursor-pointer desktop-nav-button button-primary block rounded-lg py-2 text-base font-bold leading-7"
+                        >
+                            {t("navbar.button.cv")}
                         </a>
                     </div>
                     <div className='flex items-center justify-end gap-x-5'>
@@ -113,6 +124,13 @@ export default function Navbar() {
                                 className="-mx-3 block color-primary rounded-lg py-2 px-3 text-base font-bold leading-7"
                             >
                                 {t("navbar.button.contact")}
+                            </a>
+                            <a
+                                href={process.env.PUBLIC_URL + '/docs/cv_ES.pdf'}
+                                target='_blank'
+                                className="-mx-3 block color-primary rounded-lg py-2 px-3 text-base font-bold leading-7"
+                            >
+                                {t("navbar.button.cv")}
                             </a>
                         </div>
                         <div className='flex items-center justify-end gap-x-5 mt-10'>

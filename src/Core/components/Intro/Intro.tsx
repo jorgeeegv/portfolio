@@ -5,17 +5,14 @@ import {
     faSquareGithub,
     faLinkedin,
     faAngular,
-    faReact,
     faHtml5,
     faCss3Alt,
-    faJs,
-    faFigma,
     faBootstrap
 } from "@fortawesome/free-brands-svg-icons";
 export default function Intro() {
     const [t,i18n] = useTranslation("global");
     return (
-        <div id="intro" className="w-full mt-9 lg:my-40 flex gap-x-20 items-center justify-center grid grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-1">
+        <div id="intro" className="w-full flex gap-x-20 items-center justify-center grid grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-1">
             <div className="col-span-1 w-full lg:w-auto flex flex-col justify-center items-end">
                 <div className='w-full lg:max-w-xl flex flex-col gap-y-2'>
                     <div className="lg:inline-block text-center lg:text-start font-bold title-section">
@@ -55,7 +52,7 @@ export default function Intro() {
                 </div>
             </div>
             <div className="col-span-1 py-8 lg:py-0 flex justify-center items-start lg:flex lg:justify-start lg:items-start">
-                <img className="img-intro" src={process.env.PUBLIC_URL + '/imgs/jorge3.jpg'} alt="" />
+                <img className="img-intro" src={process.env.PUBLIC_URL + '/imgs/jorge.jpg'} alt="" />
             </div>
         </div>
     );

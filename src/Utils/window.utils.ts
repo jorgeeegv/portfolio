@@ -6,7 +6,7 @@ export function scrollTo(id: any,block:string,inline:string) {
     });
 }
 
-export default function setEntryAnimationRight(timeFast:number) {
+export function setEntryAnimationRight(timeFast:number) {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
@@ -17,4 +17,19 @@ export default function setEntryAnimationRight(timeFast:number) {
     })
     const hiddenCards = document.querySelectorAll('.hidden-right-'+timeFast);
     hiddenCards.forEach(card => observer.observe(card));
+}
+
+export function setClassIfIsVisible(className:string,classNameToAdd:string){
+    debugger
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                debugger
+                if (entry.target.classList.contains(classNameToAdd)) entry.target.classList.remove(classNameToAdd);
+                entry.target.classList.add(classNameToAdd);
+            }
+        })
+    })
+    const domElements = document.querySelectorAll(className);
+    domElements.forEach(item => observer.observe(item));
 }

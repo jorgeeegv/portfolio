@@ -4,7 +4,8 @@
             "init": "Init",
             "about": "About",
             "experience": "Experience",
-            "contact": "Contact"
+            "contact": "Contact",
+            "cv": "My CV!"
         }
     },
     "intro": {

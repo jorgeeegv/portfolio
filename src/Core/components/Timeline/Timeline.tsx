@@ -38,7 +38,7 @@ export default function Timeline() {
     }
 
     return (
-        <div id='experience' className="flex w-full my-40">
+        <div id='experience' className="flex w-full">
             <div className="flex flex-col w-full justify-center items-center lg:gap-20">
                 <div className="text-3xl p-5 lg:p-0 font-bold color-primary title-section">{t('experience.title')}</div>
                 <div className="flex flex-row gap-y-20 lg:flex-row w-full justify-start lg:justify-center items-center y-20 grid grid-cols-5 grid-rows-none	 lg:grid-cols-1 grid-rows-2">
