@@ -24,7 +24,6 @@ export function setClassIfIsVisible(className:string,classNameToAdd:string){
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
-                debugger
                 if (entry.target.classList.contains(classNameToAdd)) entry.target.classList.remove(classNameToAdd);
                 entry.target.classList.add(classNameToAdd);
             }

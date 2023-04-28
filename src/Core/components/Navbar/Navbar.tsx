@@ -71,7 +71,7 @@ export default function Navbar() {
                             {t("navbar.button.contact")}
                         </a>
                         <a
-                            href={process.env.PUBLIC_URL + '/docs/cv_'+i18n.language +'.pdf'}
+                            href={process.env.PUBLIC_URL + '/docs/cv.pdf'}
                             target='_blank'
                             className="cursor-pointer desktop-nav-button button-primary block rounded-lg py-2 text-base font-bold leading-7"
                         >
