@@ -5,6 +5,9 @@
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, var(--color-primary) 0px 2px 16px 0px;
     border-radius: 8%;
 }
+.img-about-me:hover{
+    box-shadow: rgba(14, 30, 37, 0.12) 2px 4px 6px 2px, var(--color-primary) 2px 4px 16px 2px;
+}
 @media (max-width: 844px){
     .img-about-me{
         object-fit: cover;

@@ -4,6 +4,7 @@ import {setEntryAnimationRight} from '../../../Utils/window.utils';
 import { useEffect } from 'react';
 export default function AboutMe() {
     const [t,i18n] = useTranslation("global");
+    hoverImgEffect()
     useEffect(() => {
         setEntryAnimationRight(1);
         setEntryAnimationRight(2);
@@ -29,4 +30,30 @@ export default function AboutMe() {
             </div>
         </div>
     )
+}
+
+function hoverImgEffect() {
+    const imgIntro: any = document.querySelector('.img-about-me');
+    if (imgIntro) {
+        const imgHeight = imgIntro.clientHeight;
+        const imgWidth = imgIntro.clientWidth;
+        imgIntro.addEventListener('mousemove', (evt: any) => {
+            const { layerX, layerY } = evt;
+            const yRotation = ((layerX - imgWidth / 2) / imgWidth) * 40;
+            const XRotation = ((layerY - imgHeight / 2) / imgHeight) * 40;
+            const style = `
+                            scale(1.1)
+                            rotateX(${XRotation}deg)
+                            rotateY(${yRotation}deg)`;
+            imgIntro.style.transform = style;
+        })
+
+        imgIntro.addEventListener('mouseout', (evt: any) => {
+            console.log('estoy fuera')
+            imgIntro.style.transform = `
+                            scale(1)
+                            rotateX(0deg)
+                            rotateY(0deg)`;
+        })
+    }
 }
